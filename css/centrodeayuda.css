@@ -1,0 +1,283 @@
+:root {
+  --Roboto: 'Roboto', sans-serif;
+}
+
+html {
+  box-sizing: border-box
+}
+
+*,*::after,*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--Roboto);
+}
+
+.header {
+  width: 100%;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.contenedor .ingresar {
+  display: none;
+}
+
+.contenedor .ingresar a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+
+.contenido {
+  width: 100%;
+  max-width: 648px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.contenido .titulo {
+  display: none;
+}
+
+.contenido .busqueda {
+  position: relative;
+}
+
+.contenido .busqueda input{
+  margin-top: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(3, 44, 91, 0.35);
+  padding: 16px 30px;
+}
+
+.contenido .busqueda img:nth-child(1){
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  background-image: url('../assets/icons/Search.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1000;
+}
+
+.contenido .busqueda .button {
+  content: "";
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: 56px;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  animation: scale .3s ease;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.contenido .busqueda .button:active {
+  transform: scale(0.9);
+}
+
+.video-youtube {
+  margin-top: 47px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+.video-youtube a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.video-youtube img {
+  width: 32px;
+  height: 32px; 
+}
+
+.mas-buscado {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+.mas-buscado p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.mas-buscado a {
+  text-decoration: none;
+}
+
+.opciones {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.opciones .item a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.reclamacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.reclamacion a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.reclamacion img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer {
+  margin-top: 177px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer a  {
+  text-decoration: none;
+}
+
+.footer .navegacion ul {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.footer .navegacion a {
+  color: rgba(3, 44, 91, 0.35);
+  font-size: 16px;
+}
+
+.footer .copyright {
+  display: none;
+}
+
+.footer .sociales {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.footer .sociales ul {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+}
+
+.footer .sociales img {
+  width: 20px;
+}
+
+@media (min-width: 390px) {
+  .contenedor {
+    margin-top: 72px;
+  }
+}
+
+@media (min-width: 744px) {
+  .contenido {
+    padding: 0 48px;
+  }
+  .footer .navegacion ul {
+    flex-direction: row;
+    gap: 48px;
+  }
+  .footer .sociales ul {
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .contenedor {
+    margin-top: 48px;
+    padding: 0 48px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contenedor .ingresar {
+    display: block;
+  }
+
+  .contenido .titulo {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 37px;
+    margin-top: 48px;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 48px;
+  }
+
+  .footer .copyright {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(3, 44, 91, 0.35);
+  }
+
+  .footer .navegacion ul {
+    gap: 40px;
+  }
+  .footer .sociales ul {
+    gap: 31px;
+  }
+}
