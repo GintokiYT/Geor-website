@@ -281,3 +281,9 @@ body {
     gap: 31px;
   }
 }
+
+@media (min-width: 1280px) {
+  .ingreso-ul {
+    display: none;
+  }
+}
